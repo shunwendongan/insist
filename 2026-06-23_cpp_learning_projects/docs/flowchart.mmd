@@ -1,0 +1,33 @@
+flowchart TD
+    Start([Start])
+    ClientConnect["Client connects to server"]
+    Accept["TcpServer accepts socket"]
+    MakeSession["Create shared_ptr<Session>"]
+    StartSession["Session::start registers fd in EventLoop"]
+    ReadReady{"EPOLLIN ready?"}
+    ReadBytes["async_read recv bytes into buffer"]
+    FullFrame{"Full frame available?"}
+    Decode["Decode protobuf RpcMessage"]
+    Callback["Invoke message handler callback"]
+    IsRequest{"REQUEST?"}
+    BuildResponse["Build RpcMessage RESPONSE"]
+    Enqueue["Session::send enqueue framed bytes"]
+    WriteReady{"EPOLLOUT ready?"}
+    WriteBytes["async_write flush write queue"]
+    Close{"close/error?"}
+    Cleanup["remove fd, close socket, run close handler"]
+    Continue["keep full-duplex event loop running"]
+
+    Start --> ClientConnect --> Accept --> MakeSession --> StartSession --> ReadReady
+    ReadReady -- yes --> ReadBytes --> FullFrame
+    FullFrame -- yes --> Decode --> Callback --> IsRequest
+    IsRequest -- yes --> BuildResponse --> Enqueue --> WriteReady
+    IsRequest -- no --> Continue
+    FullFrame -- no --> Continue
+    WriteReady -- yes --> WriteBytes --> Continue
+    Continue --> ReadReady
+    ReadReady -- no --> WriteReady
+    WriteReady -- no --> Close
+    Close -- no --> Continue
+    Close -- yes --> Cleanup
+

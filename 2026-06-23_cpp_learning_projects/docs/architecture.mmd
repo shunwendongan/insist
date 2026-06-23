@@ -1,0 +1,30 @@
+flowchart LR
+    subgraph Client["RPC Client Process"]
+        CApp["Client App"]
+        RClient["RpcClient<br/>call_async / notify"]
+        CSession["Session<br/>shared_ptr lifetime"]
+        CLoop["EventLoop<br/>epoll async read/write"]
+    end
+
+    subgraph Wire["TCP Transport"]
+        Frame["4-byte length header<br/>protobuf RpcMessage body"]
+    end
+
+    subgraph Server["RPC Server Process"]
+        SLoop["EventLoop<br/>epoll accept/read/write"]
+        Acceptor["TcpServer<br/>async accept"]
+        SSession["Session<br/>read buffer + write queue"]
+        Handler["Service Handler<br/>callback dispatch"]
+    end
+
+    CApp --> RClient
+    RClient --> CSession
+    CSession --> CLoop
+    CSession <--> Frame
+    Frame <--> SSession
+    SLoop --> Acceptor
+    Acceptor --> SSession
+    SSession --> Handler
+    Handler --> SSession
+    SSession --> SLoop
+
