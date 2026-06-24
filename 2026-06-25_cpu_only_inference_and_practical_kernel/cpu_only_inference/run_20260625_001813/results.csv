@@ -1,0 +1,23 @@
+system,phase,round,ok,latency_s,completion_tokens,completion_tok_s,error,text_preview
+llama.cpp,warmup,1,True,0.49764220003271475,48,96.45484244874028,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,warmup,1,True,0.6253706999705173,48,76.75447538917786,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,serial,1,True,0.49627820000750944,48,96.71994457800824,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,serial,1,True,0.5634871000074781,48,85.1838489281529,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,serial,2,True,0.5143489000038244,48,93.32186770428225,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,serial,2,True,0.5539521999889985,48,86.65007558585972,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,serial,3,True,0.4990490000345744,48,96.18293994512469,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,serial,3,True,0.5576559000182897,48,86.07458470075494,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,serial,4,True,0.525038100022357,48,91.42193680412161,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,serial,4,True,0.5817439000238664,48,82.51053427123304,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,serial,5,True,0.5106894000200555,48,93.99059388762518,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,serial,5,True,0.5664807999855839,48,84.73367500049699,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,paired_concurrent,1,True,0.6227724999771453,48,77.07469421299353,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,paired_concurrent,1,True,0.6851589000434615,48,70.0567415776913,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,paired_concurrent,2,True,0.6216130999964662,48,77.21844986901479,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,paired_concurrent,2,True,0.6686498000053689,48,71.78645682630068,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,paired_concurrent,3,True,0.650292599981185,48,73.81292667545162,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,paired_concurrent,3,True,0.6789584999787621,48,70.69651532678573,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,paired_concurrent,4,True,0.6173015999956988,48,77.75777675018897,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,paired_concurrent,4,True,0.6587682999670506,48,72.86325101314196,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+llama.cpp,paired_concurrent,5,True,0.6730676000006497,48,71.31527353263427,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
+nano_vllm_gguf,paired_concurrent,5,True,0.6954891000059433,48,69.01617868574765,,  用中文解释，不用翻译，用专业术语。  例如：CPU-only LLM推理中，当 batch size 为 1 时，每个模型的推理时间是 1秒，而 batch size 
